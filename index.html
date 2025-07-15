@@ -4,6 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>StayDiva: Explore Properties</title>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-analytics-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-auth-compat.js"></script>
+
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body, html { height: 100%; font-family: 'Segoe UI', sans-serif; }
@@ -44,10 +50,24 @@
       <iframe id="video-frame" src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen></iframe>
     </div>
   </div>
-  <script>
-    function loadVideo(url) {
-      document.getElementById('video-frame').src = url;
-    }
-  </script>
-</body>
-</html>
+<script>
+  // Firebase config from your registered app
+  const firebaseConfig = {
+    apiKey: "AIzaSyDBJqAuZR4fQ-iwuNVnDqoTyInnv6oMdfs",
+    authDomain: "staydiva-3c932.firebaseapp.com",
+    projectId: "staydiva-3c932",
+    storageBucket: "staydiva-3c932.appspot.com",
+    messagingSenderId: "768261956518",
+    appId: "1:768261956518:web:cb201a819b394337896567",
+    measurementId: "G-C04CQG6QCL"
+  };
+
+  // Initialize Firebase and Analytics
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+  function loadVideo(url) {
+    document.getElementById('video-frame').src = url;
+  }
+</script>
+
