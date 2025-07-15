@@ -50,24 +50,21 @@
       <iframe id="video-frame" src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen></iframe>
     </div>
   </div>
+
 <script>
   // Firebase config from your registered app
   const firebaseConfig = {
     apiKey: "AIzaSyDBJqAuZR4fQ-iwuNVnDqoTyInnv6oMdfs",
-    authDomain: "staydiva-3c932.firebaseapp.com",
-    projectId: "staydiva-3c932",
-    storageBucket: "staydiva-3c932.appspot.com",
-    messagingSenderId: "768261956518",
-    appId: "1:768261956518:web:cb201a819b394337896567",
-    measurementId: "G-C04CQG6QCL"
+    ...
   };
 
   // Initialize Firebase and Analytics
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 
-  function loadVideo(url) {
-    document.getElementById('video-frame').src = url;
-  }
+  // Google Auth handler
+  document.getElementById("google-signin").addEventListener("click", () => {
+    ...
+  });
 </script>
 
